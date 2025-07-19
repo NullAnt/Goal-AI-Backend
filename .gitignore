@@ -5,3 +5,8 @@ __pycache__/
 goal_ai/chroma_db/
 
 test.py
+
+cron_job.py
+scheduler.py
+send_email.py
+vector_db.py
