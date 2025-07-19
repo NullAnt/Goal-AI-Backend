@@ -1,0 +1,7 @@
+.venv/
+
+__pycache__/
+
+goal_ai/chroma_db/
+
+test.py
