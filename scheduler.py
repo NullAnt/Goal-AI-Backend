@@ -65,8 +65,9 @@ def check_and_notify():
 
 # Schedule with APScheduler
 scheduler = BlockingScheduler()
-scheduler.add_job(check_and_notify, 'interval', seconds=20)
-print("Reminder scheduler started. Checking every 20 seconds...")
+
+scheduler.add_job(check_and_notify, 'interval', minutes=1)
+print("Reminder scheduler started. Checking every minute...")
 
 try:
     scheduler.start()
