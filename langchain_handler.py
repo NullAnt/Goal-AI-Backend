@@ -12,7 +12,8 @@ llm = Ollama(model="gemma3:4b")
 prompt_template = (
     "Create a Routine for the goal. "
     "Strictly only return a JSON array where each object has a key 'time' (stores time) and a key 'message' (stores what message to display at that time). "
-    "Example: [{{\"time\": \"8:00 AM\", \"message\": \"Wake up!\"}}, {{\"time\": \"8:30 AM\", \"message\": \"Breakfast\"}}, {{\"time\": \"9:00 AM\", \"message\": \"Start working on goal\"}}]. "
+    "Time should be in HH:MM (24-hour) format. "
+    "Example: [{{\"time\": \"08:00\", \"message\": \"Wake up!\"}}, {{\"time\": \"08:30\", \"message\": \"Breakfast\"}}, {{\"time\": \"09:00 \", \"message\": \"Start working on goal\"}}]. "
     "Goal: {goal}"
 )
 

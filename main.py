@@ -1,8 +1,8 @@
 from fastapi import FastAPI, HTTPException
 from pydantic import BaseModel
 from fastapi.middleware.cors import CORSMiddleware
-from langchain_handler import generate_and_store_routine  # We'll create this later
-from cron_job import run_daily_routine_reminders  # We'll create this later
+from langchain_handler import generate_and_store_routine 
+
 
 app = FastAPI()
 
@@ -30,5 +30,4 @@ async def generate(goal_input: GoalInput):
     
 @app.get("/")
 async def run_cornjob():
-    run_daily_routine_reminders()
     return {"message": "Daily routine reminders sent successfully."}
